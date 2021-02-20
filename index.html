@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="main">
+      <div class="main_container">
+        <h1>TELESKETCH</h1>
+
+        <div class="container" id="container">
+          <!-- div del sidebar -->
+          <div class="sideOptions">
+            <div class="colorPicker">
+              <div class="color-box">
+                <input type="color" id="color-select" />
+              </div>
+              <span>Pixel Color</span>
+            </div>
+            <div class="backgroundPicker">
+              <div class="color-box">
+                <input type="color" id="background-select" value="#ffffff" />
+              </div>
+              <span>Background Color</span>
+            </div>
+
+            <button id="color-fill">Color</button>
+            <button id="color-grabber">Color Picker</button>
+            <button id="eraser-btn">Eraser</button>
+            <button id="rgb-btn">RGB Colors</button>
+            <button id="shades-btn">Shades</button>
+            <button id="lighten-btn">Lighten Shades</button>
+
+            <div class="slider">
+              <input
+                type="range"
+                value="25"
+                min="2"
+                max="64"
+                id="slider-range"
+                onmouseover="rangeSliderValue(this.value)"
+                onchange="rangeSlider(this.value)"
+              />
+              <div id="progress-bar"></div>
+            </div>
+
+            <p class="grid-p">
+              Grid size: <span id="range-value"> 25</span> x
+              <spa id="range-value">25</spa>
+            </p>
+
+            <button id="grid-btn" class="btn-on">On/Off lines</button>
+            <button id="clear-btn">Clear all</button>
+          </div>
+
+          <!-- div de la pantalla del juego -->
+          <div class="gridGameContainer" id="gridGameContainer">
+            <div class="gridGame"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
