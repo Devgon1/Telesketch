@@ -157,16 +157,16 @@ onOffLines.addEventListener("click", () => {
   for (let i = 0; i < gridElements.length; i++) {
     gridElements[i].classList.toggle("gridElement");
   }
-  console.log(gridElements[2].classList);
+  // console.log(gridElements[2].classList);
 });
 
 //functions
 
 const clearGrid = () => {
-  console.log(gridElements[2].classList);
+  // console.log(gridElements[2].classList);
   document.documentElement.style.setProperty("--bg-color", bgColor); //background stays the same color when cleared
   gridElements = document.querySelectorAll(".selection");
-  console.log(gridElements[2].classList);
+  // console.log(gridElements[2].classList);
   for (let i = 0; i < gridElements.length; i++) {
     fadeGrid(gridElements[i]);
   }
@@ -308,7 +308,7 @@ const clickDrawing = (e) => {
         let shadeAmount = parseInt(e.target.getAttribute("data-shade"));
         shadeAmount++;
         e.target.setAttribute("data-shade", `${shadeAmount}`);
-        console.log(e.target.dataset.shade);
+        // console.log(e.target.dataset.shade);
       }
       if (
         e.target.style.backgroundColor == "" ||
@@ -413,7 +413,7 @@ const drawWhileClick = (e) => {
 
 const listeningClick = () => {
   gridElements = document.querySelectorAll(".gridElement");
-  console.log(gridElements);
+  // console.log(gridElements);
 
   for (let i = 0; i < gridElements.length; i++) {
     gridElements[i].addEventListener("mousedown", clickDrawing);
