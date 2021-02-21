@@ -28,7 +28,7 @@
               <span>Background Color</span>
             </div>
 
-            <button id="color-fill">Color</button>
+            <button id="color-fill">Fill with color</button>
             <button id="color-grabber">Color Picker</button>
             <button id="eraser-btn">Eraser</button>
             <button id="rgb-btn">RGB Colors</button>
@@ -42,7 +42,7 @@
                 min="2"
                 max="64"
                 id="slider-range"
-                onmouseover="rangeSliderValue(this.value)"
+                onmousemove="rangeSliderValue(this.value)"
                 onchange="rangeSlider(this.value)"
               />
               <div id="progress-bar"></div>
@@ -54,12 +54,16 @@
             </p>
 
             <button id="grid-btn" class="btn-on">On/Off lines</button>
-            <button id="clear-btn">Clear all</button>
+            <button class="clear-btn" id="clear-btn">Clear all</button>
           </div>
 
           <!-- div de la pantalla del juego -->
-          <div class="gridGameContainer" id="gridGameContainer">
-            <div class="gridGame"></div>
+          <div
+            class="gridGameContainer"
+            id="gridGameContainer"
+            draggable="false"
+          >
+            <div class="gridGame" id="gridGame" draggable="false"></div>
           </div>
         </div>
       </div>

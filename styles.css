@@ -4,6 +4,9 @@
   box-sizing: border-box;
 }
 
+:root {
+  --bg-color: #ffffff;
+}
 body {
   background-color: #181818;
 }
@@ -13,7 +16,10 @@ h1 {
   color: green;
   margin-top: 1.5rem;
   margin-bottom: 2rem;
+  /* text-decoration: underline;
+  text-decoration-color: rgb(226, 168, 43); */
 }
+
 .main {
   display: grid;
   height: 100vh;
@@ -21,23 +27,9 @@ h1 {
 .main_container {
   display: grid;
   margin: auto;
-}
-.gridGamecontainer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 650px;
-  height: 650px;
-  background-color: #202020;
-  border-radius: 4px;
+  text-align: center;
 }
 
-.gridGame {
-  display: grid;
-  height: 625px;
-  width: 625px;
-  border: 1px solid rgb(216, 216, 216);
-}
 .main {
   /* margin: 0 auto; */
   margin-right: auto;
@@ -46,6 +38,9 @@ h1 {
 .container {
   display: flex;
   justify-content: space-evenly;
+  background-color: rgb(36, 36, 36);
+  padding: 15px;
+  border-radius: 10px;
 }
 
 input[type="color"] {
@@ -97,6 +92,10 @@ button {
   cursor: pointer;
 }
 
+button.clear-btn {
+  margin-bottom: 0;
+}
+
 .sideOptions {
   width: 400px;
   background-color: #202020;
@@ -144,4 +143,59 @@ input[type="range"] {
   position: absolute;
   top: 12px;
   left: 0;
+}
+
+.gridGamecontainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 1024px;
+  /* height: 650px; */
+  background-color: #202020;
+  /* border-radius: 4px; */
+}
+
+.gridGame {
+  display: grid;
+  height: 600px;
+  width: 600px;
+  border: 2px solid rgb(216, 216, 216);
+}
+
+.gridElement {
+  border: 1px solid rgb(216, 216, 216);
+}
+.selection {
+  user-select: none;
+}
+
+/*fades when clearing*/
+.clear-fade {
+  background-color: var(--bg-color) !important;
+  transition: background-color 1.5s ease;
+}
+
+.clear-fade-2 {
+  background-color: var(--bg-color) !important;
+  transition: background-color 1.4s ease;
+}
+
+.clear-fade-3 {
+  background-color: var(--bg-color) !important;
+  transition: background-color 1.3s ease;
+}
+
+.clear-fade-4 {
+  background-color: var(--bg-color) !important;
+  transition: background-color 1.2s ease;
+}
+
+.clear-fade-5 {
+  background-color: var(--bg-color) !important;
+  transition: background-color 1.1s ease;
+}
+
+.clear-fade-6 {
+  background-color: var(--bg-color) !important;
+  transition: background-color 1s ease;
 }
